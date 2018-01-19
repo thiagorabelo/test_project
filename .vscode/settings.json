@@ -1,0 +1,30 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+// [[ GLOBAL ]]
+
+// Workbench
+
+    // Controls if opened editors show as preview. Preview editors are reused until they are kept (e.g. via double click or editing).
+    "workbench.editor.enablePreview": false,
+
+
+// [[ PROJECT ]]
+
+//Python
+
+    "python.pythonPath": "${workspaceFolder}/env/bin/python",
+    "python.linting.pylintArgs": ["--load-plugins pylint_django"],
+    "python.linting.pylintPath": "${workspaceFolder}/env/bin/pylint",
+
+// List Files To Open configuration
+
+// Configure glob patterns for excluding files and folders. For example, the files explorer decides which files and folders to show or hide based on this setting.
+    "files.exclude": {
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true,
+        "*.pyc": true
+    }
+}
