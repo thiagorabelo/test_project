@@ -1,3 +1,4 @@
+{% load html_tricks %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,6 +8,18 @@
         <title>Test Project</title>
     </head>
     <body>
+        <form>
+            <div>
+                <label for="{{ form.input_1.id_for_label }}">{{ form.input_1.label }}</label>
+                {{ form.input_1|attr:"placeholder:Alguma coisa"|add_class:"form-group" }}
+                <span>{{ form.input_1.help_text }}</span>
+            </div>
+            <div>
+                <label for="{{ form.input_2.id_for_label }}">{{ form.input_2.label }}</label>
+                {{ form.input_2 }}
+                <span>{{ form.input_2.help_text }}</span>
+            </div>
+        </form>
         <ul>
             {% for foo in foos %}
                 <li>{{ foo.name }}{% if foo.description %} | {{ foo.description }}{% endif %}</li>

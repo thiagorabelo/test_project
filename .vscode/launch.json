@@ -6,17 +6,14 @@
     "configurations": [
         {
             "name": "Python",
-            "type": "python",
+            "type": "pythonExperimental",
             "request": "launch",
-            "stopOnEntry": true,
+            "stopOnEntry": false,
             "pythonPath": "${config:python.pythonPath}",
             "program": "${file}",
             "cwd": "${workspaceFolder}",
             "env": {},
-            "envFile": "${workspaceFolder}/.env",
-            "debugOptions": [
-                "RedirectOutput"
-            ]
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "name": "Python: Attach",
@@ -56,7 +53,7 @@
         },
         {
             "name": "Python: Django",
-            "type": "python",
+            "type": "pythonExperimental",
             "request": "launch",
             "stopOnEntry": false,
             "pythonPath": "${config:python.pythonPath}",
@@ -65,14 +62,9 @@
             "args": [
                 "runserver",
                 "--noreload",
-                "--nothreading"
             ],
             "env": {},
-            "envFile": "${workspaceFolder}/.env",
-            "debugOptions": [
-                "RedirectOutput",
-                "DjangoDebugging"
-            ]
+            "django": true
         },
         {
             "name": "Python: Flask (0.11.x or later)",

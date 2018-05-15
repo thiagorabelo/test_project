@@ -12,19 +12,23 @@
 
 //Python
 
-    "python.pythonPath": "${workspaceFolder}/env/bin/python",
-    "python.linting.pylintArgs": ["--load-plugins pylint_django"],
-    "python.linting.pylintPath": "${workspaceFolder}/env/bin/pylint",
+    "python.pythonPath": "${env:HOME}/.virtualenvs/test_project/bin/python",
+    "python.linting.pylintPath": "${env:HOME}/.virtualenvs/test_project/bin/pylint",
+    "python.linting.pylintArgs": ["--load-plugins=pylint_django"],
+    "python.linting.pylintEnabled": true,
 
 // List Files To Open configuration
 
 // Configure glob patterns for excluding files and folders. For example, the files explorer decides which files and folders to show or hide based on this setting.
     "files.exclude": {
+        "**/.git": false,
         "**/.svn": true,
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/__pycache__": true,
-        "*.pyc": true
-    }
+        "**/.directory": true
+    },
+
+    "explorer.openEditors.visible": 0,
+    "window.zoomLevel": -0.001
 }
